@@ -29,7 +29,7 @@ public class OnlineShop {
     public void addToCart(Person buyer, ShopItem item){
         // TODO: Add the item to the buyer's cart. If the buyer doesn't have a cart yet, create one.
         if (!shoppingCarts.containsKey(buyer)) {
-            shoppingCarts.put(buyer, List.of());
+            shoppingCarts.put(buyer, new ArrayList<>());
         }
         shoppingCarts.get(buyer).add(item);
     }
